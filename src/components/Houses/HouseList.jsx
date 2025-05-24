@@ -11,7 +11,7 @@ const HouseList = () => {
   if(isLoading){
     return (
       <Center>
-        <Spinner align='center' color='pink.500' />
+        <Spinner align='center' color='brand.primary' />
       </Center>
     )
   }
@@ -19,7 +19,7 @@ const HouseList = () => {
   if (houses.length === 0) {
     return (
       <Stack maxH='400px'>
-        <Heading size="lg" p={{base: '6', md: '10'}} align="center">
+        <Heading size="lg" p={{base: '6', md: '10'}} align="center" color="light.darkText">
           Oops... Can try another one?
         </Heading>
       </Stack>

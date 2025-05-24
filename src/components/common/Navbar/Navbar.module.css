@@ -142,3 +142,24 @@
     font-size: 0.75rem;
   }
 }
+
+.logo {
+  height: 44px;
+  width: 44px;
+  object-fit: contain;
+  margin-right: 12px;
+}
+
+.plantNameSmall {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #5E9BEB;
+  letter-spacing: 0.5px;
+}
+
+.userNameSmall {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #464646;
+  margin-bottom: 0;
+}

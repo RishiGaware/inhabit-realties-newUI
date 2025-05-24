@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Navbar.module.css';
 import profile from '../../../assets/images/profile.png';
+import logo from '../../../assets/images/logo.png';
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -73,17 +74,19 @@ const Navbar = () => {
 
   return (
     <nav className={styles.navbar}>
-      <div className={styles.navLeft}></div>
+      <div className={styles.navLeft}>
+        <img src={logo} alt="Logo" className={styles.logo} />
+      </div>
 
       <div className={styles.navRight}>
         <div className={styles.sessionAndInfo}>
           <div className={styles.sessionBlock}>
-            <div className={styles.plantName}>{plantName || 'No Plant Selected'}</div>
+            <div className={styles.plantNameSmall}>{plantName || 'No Plant Selected'}</div>
             <p className={styles.sessionTime}>Session ends in: {formatTime(timeLeft)}</p>
           </div>
 
           <div className={styles.userInfo}>
-            <p className={styles.userName}>{userName || 'User'}</p>
+            <p className={styles.userNameSmall}>{userName || 'User'}</p>
             <p className={styles.userRole}>{userRole || 'Role'}</p>
           </div>
         </div>

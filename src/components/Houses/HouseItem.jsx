@@ -9,26 +9,25 @@ import {
   Flex,
 } from "@chakra-ui/react";
 import { BiBed, BiBath, BiArea } from "react-icons/bi";
-
-const HouseItem = ({ house }) => {
+import LightThemeColors from "../../assets/Colors";const HouseItem = ({ house }) => {
   return (
     <Flex justify='center' align='center'>
-        <Stack justify='center' width="300px" bg="white" boxShadow="xl" borderRadius="xl">
+        <Stack justify='center' width="300px" bg="light.cardBackground" boxShadow="xl" borderRadius="xl">
         <Image src={house.imageLg} h='170' alt='houses' />
 
         <VStack p='4' align='left'>
-            <Text mt="-1" fontWeight="extrabold" fontSize="18px" color="pink.500">
+            <Text mt="-1" fontWeight="extrabold" fontSize="18px" color="brand.primary">
             Rs.{house.price}
             <span style={{ fontSize: 12, color: "grey", fontWeight: "normal" }}>
                 /month
             </span>
             </Text>
 
-            <Heading fontSize="24px" letterSpacing="tight">
+            <Heading fontSize="24px" letterSpacing="tight" color="light.darkText">
             {house.name}
             </Heading>
 
-            <Text fontSize="13px" color="grey">
+            <Text fontSize="13px" color="light.darkText">
              {house.address}
             </Text>
 
@@ -36,18 +35,18 @@ const HouseItem = ({ house }) => {
 
             <HStack spacing="5">
             <HStack>
-                <BiBed style={{ color: "#D53F8C" }} />
-                <Text fontSize="12px">{house.bedrooms}</Text>
+                <BiBed style={{ color: LightThemeColors.brandPrimary }} />
+                <Text fontSize="12px" color="light.darkText">{house.bedrooms}</Text>
             </HStack>
 
             <HStack>
-                <BiBath style={{ color: "#D53F8C" }} />
-                <Text fontSize="12px">{house.bathrooms}</Text>
+                <BiBath style={{ color: LightThemeColors.brandPrimary }} />
+                <Text fontSize="12px" color="light.darkText">{house.bathrooms}</Text>
             </HStack>
 
             <HStack>
-                <BiArea style={{ color: "#D53F8C" }} />
-                <Text fontSize="12px">{house.surface}</Text>
+                <BiArea style={{ color: LightThemeColors.brandPrimary }} />
+                <Text fontSize="12px" color="light.darkText">{house.surface}</Text>
             </HStack>
             </HStack>
 

@@ -24,13 +24,13 @@ const AboutUs = () => {
   const primaryColor = useColorModeValue("var(--lightPrimary)", "blue.400");
 
   return (
-    <Box w="100vw" position="relative" left="50%" right="50%" marginLeft="-50vw" marginRight="-50vw" bg={bgColor}>
+    <Box bg={bgColor}>
       <Container maxW="container.lg" px="6" py="16">
         <VStack spacing={16} align="stretch">
           {/* Hero Section */}
           <VStack spacing={8} textAlign="center">
             <Heading color={textColor} fontSize={{ base: "2xl", md: "4xl" }}>
-              About INHABIT REALTIES
+              About Inhabit Realties
             </Heading>
             <Text color={textColor} fontSize={{ base: "md", md: "lg" }} maxW="3xl">
               We are dedicated to making your real estate journey seamless and successful. 

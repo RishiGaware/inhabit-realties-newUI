@@ -1,6 +1,7 @@
 import { Flex, Heading, Button, HStack, chakra, ButtonGroup, useBreakpointValue, Divider } from '@chakra-ui/react';
 import { Link, useLocation } from 'react-router-dom';
 import NavMobile from './NavMobile';
+import LightThemeColors from '../../assets/Colors';
 
 const Header = () => {
   const isDesktop = useBreakpointValue({ base: false, lg: true })
@@ -16,34 +17,21 @@ const Header = () => {
     <chakra.header id="header" borderBottom='1px solid rgb(0,0,0,0.3)'>
       <Flex w='100%' py='5' px={{ base: '4', md: '8', lg: '16' }} align='center' justify='space-between'>
         <Link to='/'>
-          <Heading fontSize='3xl' color='pink.700'>INHABIT REALTIES.</Heading>
+          <Heading fontSize='3xl' color='brand.primary'>INHABIT REALTIES</Heading>
         </Link>
         {
           isDesktop ? (
           <>
-            <ButtonGroup as='nav' variant='link' spacing='5'>
-              {navItems.map((item) => (
-                <Button
-                  key={item.path}
-                  fontSize='16px'
-                  as={Link}
-                  to={item.path}
-                  color={location.pathname === item.path ? 'var(--lightPrimary)' : 'var(--lightDarkText)'}
-                  _hover={{ color: 'var(--brandPrimary)' }}
-                >
-                  {item.name}
-                </Button>
-              ))}
-            </ButtonGroup>
-
+          
+           
             <HStack spacing={4}>
               <Link to="/contact">
                 <Button
                   size='sm'
                   variant='outline'
-                  borderColor='var(--lightPrimary)'
-                  color='var(--lightPrimary)'
-                  _hover={{ bg: 'var(--lightPrimary)', color: 'white' }}
+                  borderColor='brand.primary'
+                  color='brand.primary'
+                  _hover={{ bg: 'brand.primary', color: 'white' }}
                 >
                   Contact Us
                 </Button>
@@ -52,9 +40,9 @@ const Header = () => {
                 <Button
                   size='sm'
                   variant='outline'
-                  borderColor='var(--lightPrimary)'
-                  color='var(--lightPrimary)'
-                  _hover={{ bg: 'var(--lightPrimary)', color: 'white' }}
+                  borderColor='brand.success'
+                  color='brand.primary'
+                  _hover={{ bg: 'brand.primary', color: 'white' }}
                 >
                   Sign up
                 </Button>

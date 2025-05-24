@@ -11,8 +11,8 @@
 // static const lightPrimary = Color(0xFF5E9BEB);   #5E9BEBFF
 // static const lightSecondary = Color(0xFF00726D);   #00726DFF
 // static const brandSecondary = Color.fromRGBO(163, 0, 163, 1);   #A300A3FF
-//   static const brandPrimary = Color.fromRGBO(217, 2, 219, 1);   #D902DBFF
-//   static const brandTurnary = Color.fromRGBO(108, 2, 107, 1);   #6C026BFF
+//   static const brandPrimary = Color.fromRGBO(217, 2, 219, 1);rgb(84, 0, 85)
+//   static const brandTurnary = Color.fromRGBO(108, 2, 107, 1);rgb(99, 33, 98)
 
 
 
@@ -28,7 +28,7 @@ const LightThemeColors = {
     lightPrimary: '#5E9BEB',
     lightSecondary: '#00726D',
     brandSecondary: '#A300A3FF',
-    brandPrimary: '#D902DBFF',
+    brandPrimary: 'rgb(101, 68, 101)',
     brandTurnary: '#6C026BFF',
   };
   

@@ -20,12 +20,13 @@ const NavMobile = () => {
         icon={<FaBars />}
         variant='ghost'
         onClick={onOpen}
+        color="brand.primary"
       />
       <Drawer isOpen={isOpen} placement='right' onClose={onClose}>
         <DrawerOverlay />
         <DrawerContent>
-          <DrawerCloseButton />
-          <DrawerHeader borderBottomWidth='1px'>Menu</DrawerHeader>
+          <DrawerCloseButton color="brand.primary" />
+          <DrawerHeader borderBottomWidth='1px' color="light.darkText">Menu</DrawerHeader>
           <DrawerBody>
             <VStack spacing={4} align='stretch' mt={4}>
               {navItems.map((item) => (
@@ -35,10 +36,10 @@ const NavMobile = () => {
                   to={item.path}
                   variant='ghost'
                   justifyContent='flex-start'
-                  color={location.pathname === item.path ? 'var(--lightPrimary)' : 'var(--lightDarkText)'}
+                  color={location.pathname === item.path ? 'brand.primary' : 'light.darkText'}
                   _hover={{
-                    bg: 'rgba(255, 56, 92, 0.1)',
-                    color: 'var(--brandPrimary)'
+                    bg: 'light.background',
+                    color: 'brand.primary'
                   }}
                   onClick={onClose}
                 >
@@ -49,10 +50,10 @@ const NavMobile = () => {
                 as={Link}
                 to="/login"
                 variant='outline'
-                borderColor='var(--lightPrimary)'
-                color='var(--lightPrimary)'
+                borderColor='brand.primary'
+                color='brand.primary'
                 _hover={{
-                  bg: 'var(--lightPrimary)',
+                  bg: 'brand.primary',
                   color: 'white'
                 }}
                 onClick={onClose}

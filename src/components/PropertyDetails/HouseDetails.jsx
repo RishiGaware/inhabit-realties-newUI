@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 
 import { HouseContext } from "../../context/HouseContext";
 import Form from "./Form";
-
+import LightThemeColors from "../../assets/Colors";
 const HouseDetails = () => {
 
   const {propertyId} = useParams();
@@ -18,16 +18,16 @@ const HouseDetails = () => {
     <>
       <Stack direction={{base: 'column', md: 'row'}} justify='space-between' align={{md: 'center'}}  my='28px'>
         <Box>
-          <Heading fontSize='22px'>{searchedHouse.name}</Heading>
-          <Text fontSize='15px'>{searchedHouse.address}</Text>
+          <Heading fontSize='22px' color="light.darkText">{searchedHouse.name}</Heading>
+          <Text fontSize='15px' color="light.darkText">{searchedHouse.address}</Text>
         </Box>
         
         <HStack>
-          <Text px='3' borderRadius='full' bg='green.300'>{searchedHouse.type}</Text>
-          <Text px='3' borderRadius='full' bg='purple.300'>{searchedHouse.country}</Text>
+          <Text px='3' borderRadius='full' bg='light.success' color="white">{searchedHouse.type}</Text>
+          <Text px='3' borderRadius='full' bg='light.primary' color="white">{searchedHouse.country}</Text>
         </HStack>
 
-        <Text fontWeight="extrabold" fontSize="20px" color="pink.500">Rs. {searchedHouse.price}</Text>
+        <Text fontWeight="extrabold" fontSize="20px" color="brand.primary">Rs. {searchedHouse.price}</Text>
       </Stack>
 
       <Stack direction={{base:'column', lg: 'row'}} gap='6' align='flex-start'>
@@ -36,22 +36,22 @@ const HouseDetails = () => {
 
           <Stack py='10px' spacing={{sm: '3', md: '5'}} direction={{base: 'column', md: 'row'}}>
             <HStack>
-                <BiBed style={{ color: "#D53F8C" }} />
-                <Text fontSize="14px">{searchedHouse.bedrooms} Bedrooms</Text>
+                <BiBed style={{ color: LightThemeColors.brandPrimary }} />
+                <Text fontSize="14px" color="light.darkText">{searchedHouse.bedrooms} Bedrooms</Text>
             </HStack>
 
             <HStack>
-                <BiBath style={{ color: "#D53F8C" }} />
-                <Text fontSize="14px">{searchedHouse.bathrooms} Bathrooms</Text>
+                <BiBath style={{ color: LightThemeColors.brandPrimary }} />
+                <Text fontSize="14px" color="light.darkText">{searchedHouse.bathrooms} Bathrooms</Text>
             </HStack>
 
             <HStack>
-                <BiArea style={{ color: "#D53F8C" }} />
-                <Text fontSize="14px">{searchedHouse.surface}</Text>
+                <BiArea style={{ color: LightThemeColors.brandPrimary }} />
+                <Text fontSize="14px" color="light.darkText">{searchedHouse.surface}</Text>
             </HStack>
           </Stack>
         
-          <Text fontSize='15px'>{searchedHouse.description}</Text>
+          <Text fontSize='15px' color="light.darkText">{searchedHouse.description}</Text>
       
         </VStack>
         
