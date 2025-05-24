@@ -156,7 +156,7 @@ const Contact = () => {
                   {
                     icon: FaEnvelope,
                     title: "Email",
-                    content: "support@estatery.com",
+                    content: "support@inhabitrealties.com",
                     description: "We'll respond within 24 hours"
                   },
                   {

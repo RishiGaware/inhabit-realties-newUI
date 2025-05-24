@@ -9,9 +9,9 @@ import HouseProvider from './context/HouseContext';
 import HouseDetails from './components/PropertyDetails/HouseDetails';
 import Login from './pages/login/Login'
 import Register from './pages/register/Register'
-import Features from './routes/Features'
-import AboutUs from './routes/AboutUs'
-import Contact from './routes/Contact'
+import Features from './pages/common/Features'
+import AboutUs from './pages/common/AboutUs'
+import Contact from './pages/common/Contact'
 
 const MainLayout = ({ children }) => {
   return (

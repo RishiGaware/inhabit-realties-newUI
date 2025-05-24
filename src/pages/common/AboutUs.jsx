@@ -30,7 +30,7 @@ const AboutUs = () => {
           {/* Hero Section */}
           <VStack spacing={8} textAlign="center">
             <Heading color={textColor} fontSize={{ base: "2xl", md: "4xl" }}>
-              About Estatery
+              About INHABIT REALTIES
             </Heading>
             <Text color={textColor} fontSize={{ base: "md", md: "lg" }} maxW="3xl">
               We are dedicated to making your real estate journey seamless and successful. 
